@@ -18,9 +18,9 @@
 
 #define DEMO_URL(path) [NSString stringWithFormat:@"http://%@:12580/%s", DEMO_HOST, #path]
 
-#define HOME_URL [NSString stringWithFormat:@"http://%@:8080/dist/index.js", DEMO_HOST]
+#define HOME_URL [NSString stringWithFormat:@"http://%@:8080/dist/segment/SegmentList.js", DEMO_HOST]
 
-#define BUNDLE_URL [NSString stringWithFormat:@"file://%@/bundlejs/index.js",[NSBundle mainBundle].bundlePath]
+#define BUNDLE_URL [NSString stringWithFormat:@"file://%@/bundlejs/segment/SegmentList.js",[NSBundle mainBundle].bundlePath]
 
 #define UITEST_HOME_URL @"http://test?_wx_tpl=http://localhost:12580/test/build/TC__Home.js"
 

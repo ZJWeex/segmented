@@ -5,5 +5,5 @@
    "AppId":"com.alibaba.weex",
    "CodeSign":"",
    "Profile":"",
-   "WeexBundle":"SegmentList.js"
+   "WeexBundle":"segment/SegmentList.js"
 }
