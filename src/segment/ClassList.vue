@@ -1,35 +1,39 @@
 <!-- 分类数据  -->
 <template>
-    <div class="content">
-        <div v-for="(model,i) in lists" :key="i">
-            <div v-if="model.bigImage =='true'">
-                <div class="bigcell" @click="cellClick(model)">
-                    <image class="bigImg" resize="stretch" :src="model.goodsImage"/>
-                    <div class="textcon">
-                        <div class="text-left">
-                            <text class="textName" style="width: 420px;">{{model.supGoodsName}}</text>
-                            <text class="textDes" style="width: 420px;">{{model.supGoodsDescribe}}</text>
+<div>
+    <scroller alwaysScrollableVertical='true'>
+        <div class="content">
+            <div v-for="(model,i) in lists" :key="i">
+                <div v-if="model.bigImage =='true'">
+                    <div class="bigcell" @click="cellClick(model)">
+                        <image class="bigImg" resize="stretch" :src="model.goodsImage"/>
+                        <div class="textcon">
+                            <div class="text-left">
+                                <text class="textName" style="width: 420px;">{{model.supGoodsName}}</text>
+                                <text class="textDes" style="width: 420px;">{{model.supGoodsDescribe}}</text>
+                            </div>
+                            <div class="text-right">
+                                <text style="font-size: 36px;color: #ff0033">$</text>
+                                <text style="font-size: 36px;color: #ff0033">{{model.storePrice}}</text>
+                            </div>
                         </div>
+                    </div> 
+                </div>
+                <div v-else>
+                    <div class="smallcell" @click="cellClick(model)"> 
+                        <image class="smallImg" resize="stretch" :src="model.goodsImage"/>
+                        <text class="textName">{{model.supGoodsName}}</text>
+                        <text class="textDes">{{model.supGoodsDescribe}}</text>
                         <div class="text-right">
-                            <text style="font-size: 36px;color: #ff0033">$</text>
-                            <text style="font-size: 36px;color: #ff0033">{{model.storePrice}}</text>
+                            <text style="font-size: 30px;color: #ff0033">$</text>
+                            <text style="font-size: 34px;color: #ff0033">{{model.storePrice}}</text>
                         </div>
                     </div>
                 </div> 
             </div>
-            <div v-else>
-                <div class="smallcell" @click="cellClick(model)"> 
-                    <image class="smallImg" resize="stretch" :src="model.goodsImage"/>
-                    <text class="textName">{{model.supGoodsName}}</text>
-                    <text class="textDes">{{model.supGoodsDescribe}}</text>
-                    <div class="text-right">
-                        <text style="font-size: 30px;color: #ff0033">$</text>
-                        <text style="font-size: 34px;color: #ff0033">{{model.storePrice}}</text>
-                    </div>
-                </div>
-            </div> 
         </div>
-    </div>
+    </scroller>
+</div>
 </template>
 
 <style scoped>

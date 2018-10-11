@@ -16,9 +16,7 @@
                    @scrollstart="scrollStart" 
                    @scrollend="scrollEnd">
             <div v-for="(item, index) in data" :key="index" :ref="'list-'+index">
-                <scroller class="list">
-                    <ClassList :classId='item.id'></ClassList>
-                </scroller>
+                <ClassList class="list" :classId='item.id'></ClassList>
                 <!-- <div v-if="item.id==0">
                     <homepage></homepage>
                 </div>
