@@ -188,7 +188,7 @@ export default {
                 const itemEl = that.$refs['itemX-'+index][0];
                 if(itemEl) {
                    dom.getComponentRect(itemEl, option => { 
-                       console.log('left:', option.size.left,'right:',option.size.right)
+                    //    console.log('left:', option.size.left,'right:',option.size.right)
                        //是否点击左边的按钮
                        let leftEvent = false;
                        if(that.selectedIndex > index){
