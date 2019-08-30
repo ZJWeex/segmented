@@ -1,4 +1,4 @@
-<!-- 自定义Segmented组件  -->
+<!-- 自定义Segmented组件 安卓左右切换需设置切换列表的高度，否则滑动与点击手势冲突 -->
 <template>
 <div>
     <div v-if="items.length*itemWidth>750">
